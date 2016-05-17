@@ -1,0 +1,30 @@
+
+In Head
+
+ Bottom of Body
+
+Create Drop Down:
+
+
+Task 1:
+Time:
+Medium (between 4 and 20 mins)
+Long( 20 minutes or longer)
+
+Type:
+flow
+stretch
+relax
+power
+
+select the length of desired practice
+select what type of yoga you would like to practice
+
+Task 2:
+Show URL  on screen when user input is submitted
+
+Task 3:
+
+Show actual videos on screen when user input is submitted
+
+in JS create 2 variables  for each of the drop downs. If the option is selcted, assign it to a blank value. 
