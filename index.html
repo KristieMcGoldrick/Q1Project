@@ -8,31 +8,31 @@
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-    <!-- header -->
+    <!-- Header start -->
       <header class="header">
         <div class="headerContent">
           <h1>YogaJournal Classes: Just for You</h1>
         </div>
       </header>
-    <!-- header end -->
+    <!-- Header end -->
 
             <!-- Input Buttons Start -->
-          <form action="" id="userInfo">
+          <form action="" method="post" id="userInfo">
             <div class="yogaLengthQuestion" id="length">
               <label for="radio">How Long?</label>
                 <ul>
-                  <li><input type="radio" name="Duration" value="Duration">Less Than 20 Minutes</li>
-                  <li><input type="radio" name="Duration" value="Duration">More Than 20 Minutes</li>
+                  <li><input type="radio" id="lessThan20" name="Duration" value="lessThan20"/>Less Than 20 Minutes</li>
+                  <li><input type="radio" id="moreThan20" name="Duration" value="MoreThan20"/>More Than 20 Minutes</li>
               </ul>
             </div>
                 <!-- Second DropDown Button -->
             <div class= "yogaTypeQuestion">
               <label for="radio">What Type of Yoga?</label>
                 <ul>
-                  <li><input type="radio" name="TypeofYoga" value="power">Power</li>
-                  <li><input type="radio" name="TypeofYoga" value="flow">Flow</li>
-                  <li><input type="radio" name="TypeofYoga" value="stretch">Stretch</li>
-                  <li><input type="radio" name="TypeofYoga" value="relax">Relax</li>
+                  <li><input type="radio" name="TypeofYoga" value="power"/>Power</li>
+                  <li><input type="radio" name="TypeofYoga" value="flow"/>Flow</li>
+                  <li><input type="radio" name="TypeofYoga" value="stretch"/>Stretch</li>
+                  <li><input type="radio" name="TypeofYoga" value="relax"/>Relax</li>
                 </ul>
             </div>
             <br></br>
@@ -40,8 +40,12 @@
           </form>
             <!-- Input Buttons End -->
 
-    		      <h3 class="youtubeLinks">Videos for You. </h3>
-                <div class="result"></div>
+    		  <h2 class="youtubeLinks">Videos for You. </h2>
+          <!-- The IFRAME Tag Requred to Play the YouTube API -->
+          <iframe id="player" type="text/html" width="640" height="390"
+          src="http://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=http://example.com"
+          frameborder="0"></iframe>
+          <div class="result"></div>
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
