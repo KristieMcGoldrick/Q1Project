@@ -1,1 +1,17 @@
+.header {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 25%;
+  width: 25%;
+}
 
+.headerContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+li {
+list-style-type: none;
+}
