@@ -41,7 +41,10 @@ $(document).ready(function() {
     var videoUrl = "https://www.youtube.com/embed/";
     videoUrl += videoId;
     console.log(videoUrl);
-    $(".result").append("<iframe type='text/html' width='640' height='390' class='video' src='" + videoUrl + "'frameborder='0'</iframe>");
+    $(".result").append("<iframe type='text/html' width='640' height='390' class='video' src='" + videoUrl + "'frameborder='0' + allowfullscreen></iframe>");
   }
 
+  $('.save').on('click', function(){
+      $('#player').hide();
+    });
 });
