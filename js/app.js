@@ -33,16 +33,15 @@ $(document).ready(function() {
         var videoId= item.id.videoId;
         $(".result").append("<h4>" + item.snippet.title + "</h4>");
         $(".result").append("<p>" + item.snippet.description + "</p>");
-        $(".result").append("<p>" + videoId + "</p>");
         createUniqueLink(videoId);
       }
     });
   };
   function createUniqueLink(videoId){
-    var videoUrl = "http://www.youtube.com/embed/";
+    var videoUrl = "https://www.youtube.com/embed/";
     videoUrl += videoId;
     console.log(videoUrl);
-    $(".result").append("<p>" +"src="+videoUrl + "<p>");
+    $(".result").append("<iframe type='text/html' width='640' height='390' class='video' src='" + videoUrl + "'frameborder='0'</iframe>");
   }
-  getVideos();
+
 });
