@@ -1,26 +1,48 @@
 $(document).ready(function() {
-// Yoga Journal YouTube API
-// API with Query = stretch  or Length = medium Defined
 
-$.get(yogaYouTubeResults("flow", "long"), function(data) {
-  for (i=0; i < data.items.length; i++){
-    var item = data.items[i];
-    // console.log(item.snippet.title);
-    // console.log(item.snippet.description);
-    $(".result").append("<h4>" + item.snippet.title + "</h4>");
-    $(".result").append("<p>" + item.snippet.description + "</p>");
-  }
-});
+  var url = createYogaUrl("flow", "long");
+  getVideos(url);
 
-function yogaYouTubeResults(queryString, videoDuration) {
-  var url = "https://www.googleapis.com/youtube/v3/search";
-  url += "?part=snippet";
-  url += "&channelId=UC-QFhQGiB-WqOjRR98XZrkA";
-  url += "&q="+queryString;
-  url += "&type=video";
-  url += "&videoDuration="+videoDuration;
-  url +="&key=AIzaSyALpGtcMsFAZ5klXNKclSKJ6UM0QnsjoRM";
-  return url;
+    // Submit Button Information
+  $("#userInfo").on("submit",function(event){
+    event.preventDefault()
+    var userType =  $(".yogaTypeQuestion input:checked").val();
+    var userDuration =  $(".yogaLengthQuestion input:checked").val();
+    var url = createYogaUrl(userType, userDuration);
+    $(".result").empty();
+    getVideos(url);
+
+  });
+  // Yoga Journal YouTube API
+  // API with Query = stretch  or Length = medium Defined
+  function createYogaUrl(type, duration) {
+    var url = "https://www.googleapis.com/youtube/v3/search";
+    url += "?part=snippet";
+    url += "&channelId=UC-QFhQGiB-WqOjRR98XZrkA";
+    url += "&q="+ type;
+    url += "&type=video";
+    url += "&videoDuration="+ duration;
+    url +="&key=AIzaSyALpGtcMsFAZ5klXNKclSKJ6UM0QnsjoRM";
+    return url;
   };
-  console.log(yogaYouTubeResults("flow","long"));
+
+  function getVideos (url) {
+    $.get(url , function(data) {
+      for (i=0; i < data.items.length; i++){
+        var item = data.items[i];
+        var videoId= item.id.videoId;
+        $(".result").append("<h4>" + item.snippet.title + "</h4>");
+        $(".result").append("<p>" + item.snippet.description + "</p>");
+        $(".result").append("<p>" + videoId + "</p>");
+        createUniqueLink(videoId);
+      }
+    });
+  };
+  function createUniqueLink(videoId){
+    var videoUrl = "http://www.youtube.com/embed/";
+    videoUrl += videoId;
+    console.log(videoUrl);
+    $(".result").append("<p>" +"src="+videoUrl + "<p>");
+  }
+  getVideos();
 });
