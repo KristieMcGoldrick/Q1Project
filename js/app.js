@@ -1,12 +1,16 @@
 $(document).ready(function() {
+  $('.youtubeLinks').hide();
 
-  var url = createYogaUrl("flow", "long");
+  var url = createYogaUrl("stress", "medium");
   getVideos(url);
 
     // Submit Button Information
   $("#userInfo").on("submit",function(event){
     event.preventDefault()
     var userType =  $(".yogaTypeQuestion input:checked").val();
+      if (userType === "other") {
+        userType = $(".yogaTypeQuestion").text();
+      }
     var userDuration =  $(".yogaLengthQuestion input:checked").val();
     var url = createYogaUrl(userType, userDuration);
     $(".result").empty();
@@ -28,6 +32,7 @@ $(document).ready(function() {
 
   function getVideos (url) {
     $.get(url , function(data) {
+      console.log(data);
       for (i=0; i < data.items.length; i++){
         var item = data.items[i];
         var videoId= item.id.videoId;
@@ -40,11 +45,13 @@ $(document).ready(function() {
   function createUniqueLink(videoId){
     var videoUrl = "https://www.youtube.com/embed/";
     videoUrl += videoId;
-    console.log(videoUrl);
+    // console.log(videoUrl);
     $(".result").append("<iframe type='text/html' width='640' height='390' class='video' src='" + videoUrl + "'frameborder='0' + allowfullscreen></iframe>");
   }
 
   $('.save').on('click', function(){
-      $('#player').hide();
+      $('.initialHeader').hide();
+      $('.youtubeLinks').show();
     });
+
 });

@@ -1,17 +1,20 @@
-.header {
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 25%;
-  width: 25%;
+/*HEADER STYLING*/
+h1 {
+  color:rgb(254, 98, 102);
+}
+.lead {
+  color:rgb(254, 98, 102);
 }
 
-.headerContent {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+/*BUTTON AND DROPDOWN STYLING*/
 
 li {
 list-style-type: none;
+}
+
+/*CONTENT STYLING*/
+
+.row{
+  padding:5%;
+  background-color: #f9ffff;
 }

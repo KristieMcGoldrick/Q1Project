@@ -4,52 +4,70 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' type='text/css' href='css/main.css'/>
     <title>YogaJournal Yoga Classes</title>
-    <link rel="stylesheet" href="css/main.css">
+
   </head>
   <body>
     <!-- Header start -->
       <header class="header">
-        <div class="headerContent">
-          <h1>YogaJournal Classes: Just for You</h1>
+        <div class="jumbotron jumbotron-fluid"style="background-color:rgb(203, 251, 224) !important">
+          <div class="container">
+            <h1 class="display-3" style="color: rgb(254, 98, 102) !important">Full Yoga Class:Just For You</h1>
+            <p class="lead">Find Full-Length Yoga Classes, to practice wherever YOU are. </p>
+          </div>
         </div>
       </header>
-    <!-- Header end -->
-
-            <!-- Input Buttons Start -->
+    <!-- Header End -->
+    <!-- Body Content Start -->
+      <div class="row">
+  <!-- Forms Start -->
+        <div class="col-xs-3">
           <form action="" method="post" id="userInfo">
-            <div class="yogaLengthQuestion" id="length">
-              <label for="radio">How Long?</label>
-                <ul>
-                  <li><input type="radio" id="lessThan20" name="Duration" value="medium"/>Less Than 20 Minutes</li>
-                  <li><input type="radio" id="moreThan20" name="Duration" value="long"/>More Than 20 Minutes</li>
-              </ul>
-            </div>
-                <!-- Second DropDown Button -->
-            <div class= "yogaTypeQuestion">
-              <label for="radio">What Type of Yoga?</label>
+  <!-- First DropDown Button -->
+              <div class="yogaLengthQuestion" id="length" >
+                <label for="radio">How Long?</label>
+                  <ul>
+                    <li><input type="radio" id="lessThan20" name="Duration" value="medium"/>Less Than 20 Minutes</li>
+                    <li><input type="radio" id="moreThan20" name="Duration" value="long"/>More Than 20 Minutes</li>
+                </ul>
+              </div>
+      <!-- Second DropDown Button -->
+              <div class= "yogaTypeQuestion">
+                <label for="radio">What Type of Yoga?</label>
                 <ul>
                   <li><input type="radio" name="TypeofYoga" value="power"/>Power</li>
                   <li><input type="radio" name="TypeofYoga" value="flow"/>Flow</li>
                   <li><input type="radio" name="TypeofYoga" value="stretch"/>Stretch</li>
                   <li><input type="radio" name="TypeofYoga" value="relax"/>Relax</li>
+                  <li><input type="radio" name="TypeofYoga" value="other">Other <input  class="userInput" type="text"></li>
+
                 </ul>
-            </div>
-            <input type="submit" value="SAVE" class="save">
+              </div>
+  <!-- SAVE Buttons Start -->
+              <input class=" save btn btn-primary btn-block active" type="submit" value="SEARCH">
           </form>
-            <!-- Input Buttons End -->
+        </div>
+<!-- Form End -->
 
-    		  <h2 class="youtubeLinks">Videos for You. </h2>
+<!-- Videos from YT API YogaJournal Start -->
+        <div class="col-xs-9">
+          <h2 class="initialHeader">Some Great Videos.</h2>
+    		  <h2 class="youtubeLinks">Custom Videos for You. </h2>
           <!-- The IFRAME Tag Required to Play the YouTube API  -->
-          <iframe id="player" type="text/html" width="640" height="390"
+          <!-- <iframe id="player" type="text/html" width="640" height="390"
          src="https://www.youtube.com/embed/ID3Kh50GLyo"
-          frameborder="0"></iframe>
+          frameborder="0"></iframe> -->
+          <blockquote class="blockquote">
+            <div class="result"></div>
+          </blockquote>
+        </div>
+        </div>
 
-
-          <div class="result"></div>
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="js/app.js"></script>
+    <!-- JQuery Link and JS/JQuery Link to File -->
+    <!-- BootStrap Link -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+      <script src="js/app.js"></script>
   </body>
 </html>
