@@ -1,17 +1,21 @@
 $(document).ready(function() {
   $('.youtubeLinks').hide();
+  $('.successBtn').hide();
 
   var url = createYogaUrl("stress", "medium");
   getVideos(url);
 
     // Submit Button Information
-  $("#userInfo").on("submit",function(event){
-    event.preventDefault()
-    var userType =  $(".yogaTypeQuestion input:checked").val();
+  $(".save").on("click",function(event){
+    // event.preventDefault()
+    var userType =  $(".yogaTypeQuestion li input:checked").val();
       if (userType === "other") {
-        userType = $(".yogaTypeQuestion").text();
+        console.log(userType);
+        userType = $(".userInput").val();
+        console.log(userType);
       }
     var userDuration =  $(".yogaLengthQuestion input:checked").val();
+    console.log(userDuration);
     var url = createYogaUrl(userType, userDuration);
     $(".result").empty();
     getVideos(url);
@@ -32,7 +36,7 @@ $(document).ready(function() {
 
   function getVideos (url) {
     $.get(url , function(data) {
-      console.log(data);
+      // console.log(data);
       for (i=0; i < data.items.length; i++){
         var item = data.items[i];
         var videoId= item.id.videoId;
@@ -52,6 +56,8 @@ $(document).ready(function() {
   $('.save').on('click', function(){
       $('.initialHeader').hide();
       $('.youtubeLinks').show();
+      $('.save').hide().delay(5000).fadeIn(1000);
+      $('.successBtn').fadeIn('slow').delay(2500).fadeOut(2000);
     });
 
 });
