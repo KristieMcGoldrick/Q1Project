@@ -1,6 +1,8 @@
 
 /*HEADER STYLING*/
-
+*{
+  /*margin: 2px;*/
+}
 header,
 .jumbotron {
   margin-bottom: 0px;
@@ -12,8 +14,9 @@ h1 {
 
 .display-3{
   font-family: 'Istok Web', sans-serif;
-  font-size: 84px;
+  font-size: 80px;
   font-weight: bolder;
+  /*margin-left: 20px;*/
 }
 .lead {
   font-family: 'News Cycle', sans-serif;
@@ -22,15 +25,6 @@ h1 {
   font-size: 50px;
 }
 
-/*.glyphicon{
-  font-family: 'News Cycle', sans-serif;
-  font-size: 20px;
-  width: 60%;
-}
-.alertText{
-  color:white;
-}*/
-
 /*BUTTON AND DROPDOWN STYLING*/
 
 #length,
@@ -38,6 +32,7 @@ h1 {
   font-family: 'Istok Web', sans-serif;
   font-weight: bolder;
   font-size: 24px;
+  margin-left: 20px;
   color:  rgb(18, 24, 102);
 }
 .firstUL,
@@ -47,18 +42,6 @@ h1 {
   color:  rgb(18, 24, 102);
 
 }
-
-/*.arrowAlert {
-  font-family: 'News Cycle', sans-serif;
-  font-size: 18px;
-  font-weight: bolder;
-  color:  white;
-  width: 40%;
-}
-.arrowText{
-  border: 0px;
-  width: 70%;
-}*/
 li {
 list-style-type: none;
 }
@@ -72,7 +55,8 @@ list-style-type: none;
 /*CONTENT STYLING*/
 
 .row{
-  padding:0%, 5%, 5%, 5%;
+  /*padding:0%, 5%, 5%, 5%;*/
+  border: 10px;
   background-color: #f9ffff;
 }
 
