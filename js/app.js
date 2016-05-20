@@ -44,7 +44,7 @@ $(document).ready(function() {
       for (i=0; i < data.items.length; i++){
         var item = data.items[i];
         var videoId= item.id.videoId;
-        $(".result").append("<h3>" + item.snippet.title + "</h3>");
+        $(".result").append("<h2>" + item.snippet.title + "</h2>");
         $(".result").append("<p>" + item.snippet.description + "</p>");
         createUniqueLink(videoId);
       }
