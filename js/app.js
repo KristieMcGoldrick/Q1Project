@@ -1,18 +1,22 @@
 $(document).ready(function() {
   $('.youtubeLinks').hide();
   $('.successBtn').hide();
+  // $('.arrowAlert').hide().fadeIn(9000).show('15000').fadeTo('2500', .25).slideUp('slow');
 
-  var url = createYogaUrl("stress", "medium");
+  var url = createYogaUrl("unwind", "medium");
   getVideos(url);
 
     // Submit Button Information
   $(".save").on("click",function(event){
     // event.preventDefault()
     var userType =  $(".yogaTypeQuestion li input:checked").val();
-      if (userType === "other") {
         console.log(userType);
+       if (userType === "other") {
+        // console.log(userType);
         userType = $(".userInput").val();
         console.log(userType);
+            // $(".result").append("<iframe type='text/html' width='640' height='390' class='video' src='" + "ID3Kh50GLyo" + "'frameborder='0' + allowfullscreen></iframe>");
+
       }
     var userDuration =  $(".yogaLengthQuestion input:checked").val();
     console.log(userDuration);
@@ -40,7 +44,7 @@ $(document).ready(function() {
       for (i=0; i < data.items.length; i++){
         var item = data.items[i];
         var videoId= item.id.videoId;
-        $(".result").append("<h4>" + item.snippet.title + "</h4>");
+        $(".result").append("<h3>" + item.snippet.title + "</h3>");
         $(".result").append("<p>" + item.snippet.description + "</p>");
         createUniqueLink(videoId);
       }
@@ -50,7 +54,7 @@ $(document).ready(function() {
     var videoUrl = "https://www.youtube.com/embed/";
     videoUrl += videoId;
     // console.log(videoUrl);
-    $(".result").append("<iframe type='text/html' width='640' height='390' class='video' src='" + videoUrl + "'frameborder='0' + allowfullscreen></iframe>");
+    $(".result").append("<iframe type='text/html' width='640' height='390' class='video' src='" + videoUrl + "'frameborder='0' + allowfullscreen></iframe> <br></br>");
   }
 
   $('.save').on('click', function(){
@@ -59,5 +63,4 @@ $(document).ready(function() {
       $('.save').hide().delay(5000).fadeIn(1000);
       $('.successBtn').fadeIn('slow').delay(2500).fadeOut(2000);
     });
-
 });

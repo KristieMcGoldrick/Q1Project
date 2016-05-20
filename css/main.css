@@ -1,21 +1,102 @@
+
 /*HEADER STYLING*/
+
+header,
+.jumbotron {
+  margin-bottom: 0px;
+}
 h1 {
   /*color:rgb(254, 98, 102);*/
   color:rgb(42, 102, 255);
 }
-.lead {
-  color:rgb(254, 98, 102);
+
+.display-3{
+  font-family: 'Istok Web', sans-serif;
+  font-size: 84px;
+  font-weight: bolder;
 }
+.lead {
+  font-family: 'News Cycle', sans-serif;
+  /*color:rgb(254, 98, 102);*/
+  color: rgb(219, 255, 228);
+  font-size: 50px;
+}
+
+/*.glyphicon{
+  font-family: 'News Cycle', sans-serif;
+  font-size: 20px;
+  width: 60%;
+}
+.alertText{
+  color:white;
+}*/
 
 /*BUTTON AND DROPDOWN STYLING*/
 
+#length,
+#duration {
+  font-family: 'Istok Web', sans-serif;
+  font-weight: bolder;
+  font-size: 24px;
+  color:  rgb(18, 24, 102);
+}
+.firstUL,
+.yogaTypeQuestion {
+  font-family: 'News Cycle', sans-serif;
+  font-size: 20px;
+  color:  rgb(18, 24, 102);
+
+}
+
+.arrowAlert {
+  font-family: 'News Cycle', sans-serif;
+  font-size: 18px;
+  font-weight: bolder;
+  color:  white;
+  width: 40%;
+}
+.arrowText{
+  border: 0px;
+  width: 70%;
+}
 li {
 list-style-type: none;
+}
+
+.save{
+  font-family: 'Istok Web', sans-serif;
+  font-weight: bolder;
+  color:  rgb(18, 24, 102);
 }
 
 /*CONTENT STYLING*/
 
 .row{
-  padding:5%;
+  padding:0%, 5%, 5%, 5%;
   background-color: #f9ffff;
+  /*background-color: lightgreen;*/
 }
+
+.initialHeader,
+.youtubeLinks {
+font-family: 'Istok Web', sans-serif;
+color:  rgb(18, 24, 102);
+font-weight: bolder;
+font-size: 34px;
+}
+
+/*API DETAILS STYLING*/
+
+.result{
+  font-family: 'News Cycle', sans-serif;
+  font-size: 20px;
+  color:  rgb(18, 24, 102);
+}
+
+/*Footer Styling*/
+
+/*footer{
+  height: 20%;
+  width: 100%;
+  background-color: red;
+}*/

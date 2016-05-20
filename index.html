@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="shortcut icon" type="image/x-icon" href="mala.jpg">
+    <link rel="shortcut icon" type="image/x-icon" href="mala.j">
+    <link href='https://fonts.googleapis.com/css?family=Istok+Web|News+Cycle' rel='stylesheet' type='text/css'>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,10 +13,10 @@
   <body>
     <!-- Header start -->
       <header class="header">
-        <div class="jumbotron jumbotron-fluid"style="background-image: url(seatednature.jpg) !important">
+        <div class="jumbotron jumbotron-fluid"style="background-image: url(dkblu.jpg) !important" >
           <div class="container">
-            <h1 class="display-3" style="color: rgb(254, 98, 102) !important">Full Yoga Class:Just For You</h1>
-            <p class="lead">Find Full-Length Yoga Classes, to practice wherever YOU are. </p>
+            <h1 class="display-3" style="color: rgb(219, 255, 228) !important">Full Yoga Class:Just For You</h1>
+            <p class="lead">Access and Customize Your Home Practice.  </p>
           </div>
         </div>
       </header>
@@ -23,26 +24,26 @@
     <!-- Body Content Start -->
       <div class="row">
   <!-- Forms Start -->
-        <div class="col-xs-3">
+        <div class="col-sm-3">
           <!-- <form action="" method="post" id="userInfo"> -->
   <!-- First DropDown Button -->
               <div class="yogaLengthQuestion" id="length" >
                 <label for="radio">How Long?</label>
-                  <ul>
-                    <li><input type="radio" id="lessThan20" name="Duration" value="medium"/>Less Than 20 Minutes</li>
-                    <li><input type="radio" id="moreThan20" name="Duration" value="long"/>More Than 20 Minutes</li>
+                  <ul class="firstUL">
+                    <li><input type="radio" id="lessThan20" name="Duration" value="medium"/>  Less Than 20 Minutes</li>
+                    <li><input type="radio" id="moreThan20" name="Duration" value="long"/>  More Than 20 Minutes</li>
                 </ul>
               </div>
       <!-- Second DropDown Button -->
               <div >
-                <label for="radio">What Type of Yoga?</label>
+                <label id="duration" for="radio">What Type of Yoga?</label>
                 <ul class= "yogaTypeQuestion">
-                  <li><input type="radio" name="TypeofYoga" value="power"/>Power</li>
-                  <li><input type="radio" name="TypeofYoga" value="flow"/>Flow</li>
-                  <li><input type="radio" name="TypeofYoga" value="stretch"/>Stretch</li>
-                  <li><input type="radio" name="TypeofYoga" value="relax"/>Relax</li>
-                  <li><input type="radio" name="TypeofYoga" value="other" class="otherButton">Other</li>
-                  <li><input type="text" val="" class="userInput"></li>
+                  <li><input type="radio" name="TypeofYoga" value="power"/>  Power</li>
+                  <li><input type="radio" name="TypeofYoga" value="flow"/>  Flow</li>
+                  <li><input type="radio" name="TypeofYoga" value="stretch"/>  Stretch</li>
+                  <li><input type="radio" name="TypeofYoga" value="relax"/>  Relax</li>
+                  <li><input type="radio" name="TypeofYoga" value="other" class="otherButton">  Other</li>
+                  <li><input type="text" val="" class="userInput" placeholder="Search"></li>
 
                 </ul>
               </div>
@@ -54,18 +55,17 @@
 <!-- Form End -->
 
 <!-- Videos from YT API YogaJournal Start -->
-        <div class="col-xs-9">
-          <h2 class="initialHeader">Some Great Videos.</h2>
+        <div class="col-sm-9">
+          <h2 class="initialHeader">Check Out These Yoga Classes Listed Below:</h2>
     		  <h2 class="youtubeLinks">Custom Videos for You. </h2>
-          <!-- The IFRAME Tag Required to Play the YouTube API  -->
-          <!-- <iframe id="player" type="text/html" width="640" height="390"
-         src="https://www.youtube.com/embed/ID3Kh50GLyo"
-          frameborder="0"></iframe> -->
+
+          </div>
           <blockquote class="blockquote">
             <div class="result"></div>
           </blockquote>
         </div>
         </div>
+        <footer></footer>
 
     <!-- JQuery Link and JS/JQuery Link to File -->
     <!-- BootStrap Link -->
