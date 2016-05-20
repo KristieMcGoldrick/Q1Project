@@ -1,6 +1,7 @@
 $(document).ready(function() {
   $('.youtubeLinks').hide();
   $('.successBtn').hide();
+  $('.custButt').hide().delay(5000).fadeIn(6000).fadeOut(2000);
   // $('.arrowAlert').hide().fadeIn(9000).show('15000').fadeTo('2500', .25).slideUp('slow');
 
   var url = createYogaUrl("unwind", "medium");

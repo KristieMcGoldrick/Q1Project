@@ -84,7 +84,9 @@ font-weight: bolder;
 font-size: 38px;
 /*margin-left: none;*/
 }
-
+.custButt {
+  width: 250px;
+}
 /*API DETAILS STYLING*/
 
 .result{
